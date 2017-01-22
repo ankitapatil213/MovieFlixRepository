@@ -1,0 +1,13 @@
+
+*target*
+*.jar
+*.war
+*.ear
+*.class
+.project
+.metadata
+.classpath
+.gitkeep
+.settings/
+.recommenders/
+/target/
