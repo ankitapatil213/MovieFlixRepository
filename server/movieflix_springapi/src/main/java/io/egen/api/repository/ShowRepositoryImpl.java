@@ -10,6 +10,8 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import org.springframework.stereotype.Repository;
+
+import io.egen.api.constants.MovieFlixConstants;
 import io.egen.api.entity.FlixShow;
 import io.egen.api.entity.Genre;
 import io.egen.api.entity.UserComments;
@@ -41,7 +43,7 @@ public class ShowRepositoryImpl implements ShowRepository {
 	@Override
 	public List<FlixShow> topRatedMoviesAndSeries() {
 		TypedQuery<FlixShow> query = em.createNamedQuery("FlixShow.topRated", FlixShow.class);
-		query.setParameter("imdbRating", 7);
+		query.setParameter("imdbRating",MovieFlixConstants.rateCutoff);
 		return query.getResultList();
 	}
 

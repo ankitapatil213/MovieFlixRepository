@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.egen.api.constants.MovieFlixConstants;
 import io.egen.api.entity.FlixShow;
 import io.egen.api.entity.Genre;
 import io.egen.api.entity.UserComments;
@@ -29,13 +30,13 @@ public class ShowController {
 	//findAllMovieList() :: method called to find all Movies list from the Catalog.
 	@RequestMapping(method = RequestMethod.GET, value = "flixmovies")
 	public List<FlixShow> findAllMovieList() {
-		return service.findTypeList("movie");
+		return service.findTypeList(MovieFlixConstants.Movies);
 	}
 
 	//findAllTVSeriesList() :: method called to find all TV Series list from the Catalog.
 	@RequestMapping(method = RequestMethod.GET, value = "flixseries")
 	public List<FlixShow> findAllTVSeriesList() {
-		return service.findTypeList("series");
+		return service.findTypeList(MovieFlixConstants.SERIES);
 	}
 
 	//displayTitleDetails() :: method called to display Title Details.
