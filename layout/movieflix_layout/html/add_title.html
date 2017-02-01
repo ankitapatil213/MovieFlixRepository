@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Add title</title>
+
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+</head>
+<body>
+
+<nav class="nav-bg-color">
+    <div class="container">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href=""><strong>MOVIEFLIX</strong></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                <li class=""><a href="movies.html">Catalog</a></li>
+                <li class="active"><a href="add_title.html">Manage Catalog</a></li>
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><input type="search" id="search"><span class="glyphicon glyphicon-search"></span></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp; User Name </a></li>
+                <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span>&nbsp; Logout</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container">
+
+    <form class="form-addtitle" method="post" id="">
+        <br>
+        <br>
+        <h3 class="form-heading">Create New Title</h3>
+        <br>
+        <br>
+        <div class="row" >
+        <div class="col-lg-2"></div>
+        <div class="col-sm-8">
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Title" name="title" required />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Year" name="sYear" required />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Rated" name="rated" required />
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" placeholder="Released Date" name="released" required />
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Runtime" name="runtime" required />
+            </div>
+            <div class="form-group">
+
+                <select id = "genre" class="form-control">
+                    <option value = "1">Horrer</option>
+                    <option value = "2">Comady</option>
+                    <option value = "3">Drama</option>
+                    <option value = "4">Action</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Director" name="director" required />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="writer" name="writer" required />
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Actors" name="actors" required />
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="5" id="plot" placeholder="Plot"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Language" name="language" required />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="writer" name="country" required />
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Award" name="award" required />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Poster" name="poster" required />
+            </div>
+
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Meta Score" name="metascore" required />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Imdb Rating"
+                       name="imdbrating" required />
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="IMDB Votes"
+                       name="imdbvotes" required />
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Imdb Id"
+                       name="imdbid" required />
+            </div>
+            <div class="form-group">
+                <select id = "sType" class="form-control">
+                    <option value = "movie">Movie</option>
+                    <option value = "series">Series</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn button-style" name="btn-add">
+                    <span class=""></span>ADD</button>
+            </div>
+
+        </div>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
