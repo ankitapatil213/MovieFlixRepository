@@ -23,6 +23,17 @@ public class UserServiceImpl implements UserService {
 		}
 		return repository.create(user);
 	}
+	
+	@Override
+	@Transactional
+	public User signIn(String emailId)
+	{
+		User existingUser = repository.findbyEmailId(emailId);
+		if (existingUser == null) {
+			throw new EntityNotFoundException("User with this email does not  exists");
+		}
+		return existingUser;
+	}
 
 	@Override
 	@Transactional

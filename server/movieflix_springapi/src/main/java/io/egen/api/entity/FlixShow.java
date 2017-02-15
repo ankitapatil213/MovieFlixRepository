@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 @Entity
 @NamedQueries({ @NamedQuery(name = "FlixShow.findAll", query = "SELECT e FROM FlixShow e"),
 		@NamedQuery(name = "FlixShow.showType", query = "SELECT e FROM FlixShow e where e.sType=:pType"),
-		@NamedQuery(name = "FlixShow.findByTitle", query = "SELECT e FROM FlixShow e WHERE e.title=:title"),
+		@NamedQuery(name = "FlixShow.findByTitle", query = "SELECT e FROM FlixShow e WHERE e.showId=:titleId"),
 		@NamedQuery(name = "FlixShow.topRated", query = "SELECT e.showId,e.title,e.poster FROM FlixShow e WHERE e.imdbRating >= :imdbRating"),
 		@NamedQuery(name = "FlixShow.findbyYear", query = "SELECT e FROM FlixShow e WHERE e.sYear=:year"),
 		@NamedQuery(name = "FlixShow.findByGenreType", query = "SELECT e FROM FlixShow e WHERE e.titleGenre LIKE CONCAT('%',:genre,'%')") })

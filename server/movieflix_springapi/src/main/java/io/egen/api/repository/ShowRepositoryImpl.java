@@ -61,9 +61,9 @@ public class ShowRepositoryImpl implements ShowRepository {
 	}
 
 	@Override
-	public FlixShow findByTitle(String title) {
+	public FlixShow findByTitle(String titleId) {
 		TypedQuery<FlixShow> query = em.createNamedQuery("FlixShow.findByTitle", FlixShow.class);
-		query.setParameter("title", title);
+		query.setParameter("titleId", titleId);
 
 		List<FlixShow> show = query.getResultList();
 		if (show != null && show.size() == 1) {

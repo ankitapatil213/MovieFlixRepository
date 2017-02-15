@@ -4,6 +4,7 @@ package io.egen.api.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,11 +19,13 @@ import io.egen.api.entity.UserRatingStars;
 import io.egen.api.service.ShowService;
 
 @RestController
+@CrossOrigin("http://localhost:4000")
 public class ShowController {
 	@Autowired
 	ShowService service;
 
 	//findAllShowList() :: method called to find all shows(Movies & Series) List
+	
 	@RequestMapping(method = RequestMethod.GET, value = "flixshows")
 	public List<FlixShow> findAllShowList() {
 		return service.findAllShowList();
@@ -40,9 +43,9 @@ public class ShowController {
 	}
 
 	//displayTitleDetails() :: method called to display Title Details.
-	@RequestMapping(method = RequestMethod.GET, value = "flixshows/{title}")
-	public FlixShow displayTitleDetails(@PathVariable("title") String title) {
-		return service.displayTitleDetails(title);
+	@RequestMapping(method = RequestMethod.GET, value = "flixshows/{titleId}")
+	public FlixShow displayTitleDetails(@PathVariable("titleId") String titleId) {
+		return service.displayTitleDetails(titleId);
 	}
 	//createShow() :: method called to Create new Title in catalog.
 	@RequestMapping(method = RequestMethod.POST, value = "flixshows")

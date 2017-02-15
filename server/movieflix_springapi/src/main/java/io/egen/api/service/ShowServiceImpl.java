@@ -77,8 +77,8 @@ public class ShowServiceImpl implements ShowService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public FlixShow displayTitleDetails(String title) {
-		return repository.findByTitle(title);
+	public FlixShow displayTitleDetails(String titleId) {
+		return repository.findByTitle(titleId);
 	}
 
 	@Override
