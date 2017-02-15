@@ -1,0 +1,12 @@
+<a [routerLink]="['../']" class="btn btn-primary">&lt; Back</a>
+
+<h1>User Detail</h1>
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <img [src]="user.profilePic" *ngIf="user.profilePic" class="img-responsive">
+    </div>
+    <div class="col-sm-8">
+        <p>{{user.firstName}} {{user.lastName}}</p>
+    </div>
+</div>

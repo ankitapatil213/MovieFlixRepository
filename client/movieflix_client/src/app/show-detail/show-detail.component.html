@@ -1,0 +1,58 @@
+<a [routerLink]="['../']" class="" style="float:right;">close[X]</a>
+<h4>{{show.title}}</h4>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="row">
+                <img [src]="show.poster" *ngIf="show.poster" class="img-responsive">
+        </div>
+
+    </div>
+
+    <div class="col-sm-8">
+        <br><br>
+        <div class="row">
+                rating ***** &nbsp;&nbsp;&nbsp; {{show.sYear}}&nbsp;&nbsp; {{show.rated}}
+            &nbsp;&nbsp;{{show.runtime}}
+        </div>
+        <br>
+        <div class=" row">
+            {{show.plot}}
+        </div>
+        <br>
+        <div class="row">
+                Director:{{show.director}}
+        </div>
+
+        <div class="row">
+                Actors:{{show.actors}}
+        </div>
+
+        <div class="row">
+                Writer:{{show.writer}}
+        </div>
+        <div class="row">
+                Genre:{{show.titleGenre}}
+        </div>
+        <div class="row">
+                Country:{{show.country}} &nbsp; Language:{{show.sLanguage}}
+        </div>
+        <div class="row">
+                Awards:{{show.awards}}
+        </div>
+        <br><br><br>
+        <div class="row">
+            <div class=" col-sm-9">
+                <textarea class="form-control" rows="2" placeholder="Write a comment">
+                </textarea>
+            </div>
+            <div class="col-sm-3">
+                <a href="" class="btn button-style">Comment</a>
+            </div>
+        </div>
+        <h3>User Comments</h3>
+        1.<br>
+        2.<br>
+        3.
+
+    </div>
+</div>

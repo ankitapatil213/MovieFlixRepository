@@ -1,0 +1,56 @@
+<nav class=" nav-bg-color">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="">MOVIEFLIX</a>
+        </div>
+        &nbsp;&nbsp;
+    <div id="navbar" class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><input type="search" id="search"><span class="glyphicon glyphicon-search"></span></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp; User </a></li>
+            <li><a href="login.html" class="">
+                <span class="glyphicon glyphicon-log-out"></span>&nbsp; Logout</a></li>
+        </ul>
+    </div>
+        <!--/.nav-collapse -->
+        <br>
+
+</nav>
+<div class=" ">
+
+    <div class="row ">
+        <div class="col-sm-2 menu-bar" style="background-color: #5e5e5e;">
+            <br><br>
+            &nbsp;&nbsp;<a href="" class="ancor-color"
+                           (click)="addTitle()"></a>
+            &nbsp;&nbsp;<a href="movies.html" class="ancor-color"><span class="glyphicon glyphicon-film"></span>&nbsp;Movies</a><br>
+            &nbsp;&nbsp;<a href="movies.html" class="ancor-color"><span class="glyphicon glyphicon-film"></span>&nbsp;TV Shows</a><br>
+            &nbsp;&nbsp;<a href="movies.html" class="ancor-color"><span class="glyphicon glyphicon-film"></span>&nbsp;Comady</a><br>
+            &nbsp;&nbsp;<a href="movies.html" class="ancor-color"><span class="glyphicon glyphicon-film"></span>&nbsp;Drama</a><br>
+            &nbsp;&nbsp;<a href="movies.html" class="ancor-color"><span class="glyphicon glyphicon-film"></span>&nbsp;Action</a><br>
+            &nbsp;&nbsp;<a href="movies.html" class="ancor-color"><span class="glyphicon glyphicon-film"></span>&nbsp;Horrer</a>
+        </div>
+        <div class="col-sm-9">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="text-center">Show<i class="glyphicon glyphicon-film"></i></th>
+                    <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let show of showList">
+                    <td class="text-center">
+                        <a [routerLink]="[show.showId]"><img [src]="show.poster"></a></td>
+
+                    <td class="text-center">{{show.title}}</td>
+                    <td class="text-center"><a (click)="editTitle()" class="">
+                        <span class="glyphicon glyphicon-edit"></span>&nbsp;</a></td>
+                    <td class="text-center"><a (click)="deleteTitle(show.showId)" class="">
+                        <span class="glyphicon glyphicon-remove-sign"></span>&nbsp;</a></td>
+                </tr>
+                </tbody>
+            </table>
+</div>
+    </div></div>

@@ -1,0 +1,46 @@
+<strong class="main-hading"><h1>MOVIEFLIX</h1></strong>
+<div class="signin-form">
+
+    <div class="container">
+
+        <form class="form-signin" (ngSubmit)="onLogin(myLoginForm.value)"
+              #myLoginForm="ngForm">
+            <h2 class="form-signin-heading">Sign In</h2>
+
+
+            <div class="form-group">
+                <label>Email</label>
+                <input  type="email" name="emailId" required class="form-control"
+                        id="emailId" placeholder="example@domain.com" ngModel/>
+
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input  type="password" class="form-control"
+                        placeholder="Password" name="password" id="password" ngModel
+                        required  minlength="8"/>
+
+            </div>
+
+
+            <div class="form-group">
+                <button type="submit" class="btn button-style"
+                        name="btn-login" id="btn-login">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    &nbsp; Sign In
+                </button>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                New User<a (click)="signUP()" class="btn button-style"
+                           style="float:right;">Sign UP Here</a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<router-outlet></router-outlet>
